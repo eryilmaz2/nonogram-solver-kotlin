@@ -72,7 +72,7 @@ class BoardSolver(
     }
 
     private fun definites(combos: List<List<Piece?>>): List<Piece?> {
-        return combos.first().withIndex().map { (i, first) ->
+        return combos.first().mapIndexed { i, first ->
             if (combos.all { it[i] == first }) first else null
         }
     }
