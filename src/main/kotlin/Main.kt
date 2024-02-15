@@ -3,27 +3,6 @@ package org.example
 const val SIZE = 20
 const val PROMPT = false
 
-fun combinationsSum(n: Int, k: Int): List<List<Int>> {
-    val result = mutableListOf<List<Int>>()
-
-    fun backtrack(start: Int, target: Int, path: List<Int>) {
-        if (target == 0 && path.size == n) {
-            result.add(path)
-            return
-        }
-        if (target < 0 || path.size > n) {
-            return
-        }
-
-        for (i in 0..k) {
-            backtrack(i, target - i, path + i)
-        }
-    }
-
-    backtrack(0, k, emptyList())
-    return result
-}
-
 fun main() {
     if (!PROMPT) {
         return loopTest()
