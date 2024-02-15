@@ -8,6 +8,8 @@ fun main() {
         return loopTest()
     }
 
+    // things are entered in format "1 2 3; 2 3 4; 2 1 3"
+
     println("Enter row chains")
     val rowChains = askChains()
 
